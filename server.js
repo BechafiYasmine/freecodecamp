@@ -53,4 +53,7 @@ app.delete('/users/:id', (req, res) => {
 });
 
 // Start the server
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(5000, () => {
+  const packageJson = require('./package.json');
+  console.log("Author:", packageJson.author); }
+);
